@@ -1017,7 +1017,7 @@ void AsyncClient::_dns_found(struct ip_addr *ipaddr){
         connect(IPAddress(ipaddr->u_addr.ip4.addr), _connect_port);
     } else if(ipaddr && ipaddr->u_addr.ip6.addr){
         connect(IPv6Address(ipaddr->u_addr.ip6.addr), _connect_port);
-    else {
+    } else {
         if(_error_cb) {
             _error_cb(_error_cb_arg, this, -55);
         }
